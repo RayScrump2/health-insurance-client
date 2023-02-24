@@ -18,7 +18,7 @@
 		by their health. Their health is judged in terms<br>
 		of their body-mass index, blood pressure, age,<br>
 		and family history of disease.</p>
-	<form method="post" action="http://localhost:3000/api/data">
+	<form method="post" action="https://health-insurance-server.azurewebsites.net/api/data" onsubmit="">
 	  	<label for="age">Enter the person's age in years: </label>
 	  	<input class="form-control" type="text" id="age" name="age" required placeholder="Age"><br>
   
@@ -28,11 +28,11 @@
 		<label for="weight">Enter the person's weight in pounds: </label>
 	  	<input class="form-control" type="text" id="weight" name="weight" required placeholder="Weight"><br>
 
-		<label for="sys-blood-pressure">Enter the person's systolic blood pressure: </label>
-	  	<input class="form-control" type="text" id="sys-blood-pressure" name="sys-blood-pressure" required placeholder="Systolic"><br>
+		<label for="sysBloodPressure">Enter the person's systolic blood pressure: </label>
+	  	<input class="form-control" type="text" id="sysBloodPressure" name="sysBloodPressure" required placeholder="Systolic"><br>
 
-		<label for="dia-blood-pressure">Enter the person's diastolic blood pressure: </label>
-	  	<input class="form-control" type="text" id="dia-blood-pressure" name="dia-blood-pressure" required placeholder="Diastolic"><br>
+		<label for="diaBloodPressure">Enter the person's diastolic blood pressure: </label>
+	  	<input class="form-control" type="text" id="diaBloodPressure" name="diaBloodPressure" required placeholder="Diastolic"><br>
 		<p>Does the person have a family history of ...</p>
 		<label for="diabetes">Diabetes?</label>
 	  	<select class="form-control" id="diabetes">
