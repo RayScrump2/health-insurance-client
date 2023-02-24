@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<!--https://health-insurance-server.azurewebsites.net/api/data-->
 	<meta charset="utf-8">
 	<title>Health Insurance Calculator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,15 +11,50 @@
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
-	<h1>Calculate Sum</h1>
-	<form method="post" action="https://health-insurance-server.azurewebsites.net/api/data">
-	  <label for="number1">Number 1:</label>
-	  <input type="text" id="number1" name="number1" required>
+	<div class="forminfo">
+	<h1 class="health-title">HEALTH RISK CALCULATOR</h1><br>
+	<p class="intro">This program helps you classify health insurance<br>
+		based on their risk level. That is determined<br>
+		by their health. Their health is judged in terms<br>
+		of their body-mass index, blood pressure, age,<br>
+		and family history of disease.</p>
+	<form method="post" action="http://localhost:3000/api/data">
+	  	<label for="age">Enter the person's age in years: </label>
+	  	<input class="form-control" type="text" id="age" name="age" required placeholder="Age"><br>
   
-	  <label for="number2">Number 2:</label>
-	  <input type="text" id="number2" name="number2" required>
-  
-	  <button type="submit">Calculate</button>
+	 	<label for="height">Enter the person's height in inches: </label>
+	 	<input class="form-control" type="text" id="height" name="height" required placeholder="Height"><br>
+
+		<label for="weight">Enter the person's weight in pounds: </label>
+	  	<input class="form-control" type="text" id="weight" name="weight" required placeholder="Weight"><br>
+
+		<label for="sys-blood-pressure">Enter the person's systolic blood pressure: </label>
+	  	<input class="form-control" type="text" id="sys-blood-pressure" name="sys-blood-pressure" required placeholder="Systolic"><br>
+
+		<label for="dia-blood-pressure">Enter the person's diastolic blood pressure: </label>
+	  	<input class="form-control" type="text" id="dia-blood-pressure" name="dia-blood-pressure" required placeholder="Diastolic"><br>
+		<p>Does the person have a family history of ...</p>
+		<label for="diabetes">Diabetes?</label>
+	  	<select class="form-control" id="diabetes">
+			<option>Yes</option>
+			<option>No</option>
+		  </select><br>
+
+		<label for="cancer">Cancer?</label>
+		<select class="form-control" id="cancer">
+			<option>Yes</option>
+			<option>No</option>
+		</select><br>
+
+		<label for="alzheimers">Alzheimers?</label>
+		<select class="form-control" id="alzheimers">
+			<option>Yes</option>
+			<option>No</option>
+		</select><br>
+
+
+	  	<button type="submit" class="btn btn-secondary">Calculate Risk</button>
 	</form>
+	</div>
 </body>
 </html>
