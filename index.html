@@ -1,7 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<!--https://health-insurance-server.azurewebsites.net/api/data-->
+	<!--
+		https://health-insurance-server.azurewebsites.net/api/data
+
+		The above is the link to the server where we want to send the
+		data we collect from this form, which is currently on the 
+		client side.
+	-->
 	<meta charset="utf-8">
 	<title>Health Insurance Calculator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +17,10 @@
 	<link rel="stylesheet" href="index.css">
 </head>
 <body>
+	<!--
+		This section is just the text part of the program, which provides
+		instructions and the title of it.
+	-->
 	<div class="forminfo">
 	<h1 class="health-title">HEALTH RISK CALCULATOR</h1><br>
 	<p class="intro">This program helps you classify health insurance<br>
@@ -18,7 +28,13 @@
 		by their health. Their health is judged in terms<br>
 		of their body-mass index, blood pressure, age,<br>
 		and family history of disease.</p>
-	<form method="post" action="https://health-insurance-server.azurewebsites.net/api/data" onsubmit="">
+
+	<!--
+		The form below collects the data entered by the user.
+		Each label for, id, and name should match the respective field.
+		Any questions just ask - Brian
+	-->
+	<form class="form">
 	  	<label for="age">Enter the person's age in years: </label>
 	  	<input class="form-control" type="text" id="age" name="age" required placeholder="Age"><br>
   
@@ -35,21 +51,21 @@
 	  	<input class="form-control" type="text" id="diaBloodPressure" name="diaBloodPressure" required placeholder="Diastolic"><br>
 		<p>Does the person have a family history of ...</p>
 		<label for="diabetes">Diabetes?</label>
-	  	<select class="form-control" id="diabetes">
+	  	<select class="form-control" id="diabetes" name="diabetes">
 			<option selected>Choose</option>
 			<option>Yes</option>
 			<option>No</option>
 		  </select><br>
 
 		<label for="cancer">Cancer?</label>
-		<select class="form-control" id="cancer" placeholder="Select">
+		<select class="form-control" id="cancer" name="cancer">
 			<option selected>Choose</option>
 			<option>Yes</option>
 			<option>No</option>
 		</select><br>
 
 		<label for="alzheimers">Alzheimers?</label>
-		<select class="form-control" id="alzheimers">
+		<select class="form-control" id="alzheimers" name="alzheimers" >
 			<option selected>Choose</option>
 			<option>Yes</option>
 			<option>No</option>
@@ -58,6 +74,11 @@
 
 	  	<button type="submit" class="btn btn-secondary">Calculate Risk</button>
 	</form>
+	<!--
+		**SCRIPT SRC IS FOR GETTING THE JS CODE FROM THE INDEX.JS FILE.
+		IF YOU NEED HELP ON THIS LET ME KNOW - BRIAN
+	-->
+	<script src="index.js"></script>
 	</div>
 </body>
 </html>
