@@ -34,7 +34,7 @@
 		Each label for, id, and name should match the respective field.
 		Any questions just ask - Brian
 	-->
-	<form class="form">
+	<form class="form" onsubmit="return false;">
 	  	<label for="age">Enter the person's age in years: </label>
 	  	<input class="form-control" type="text" id="age" name="age" required placeholder="Age"><br>
   
@@ -71,8 +71,9 @@
 			<option>No</option>
 		</select><br>
 
+		<h2 id="results" name="results">HELLO</h2>
 
-	  	<button type="submit" class="btn btn-secondary">Calculate Risk</button>
+	  	<button type="submit" class="btn btn-secondary" onclick="sendValues()">Calculate Risk</button>
 	</form>
 	<!--
 		**SCRIPT SRC IS FOR GETTING THE JS CODE FROM THE INDEX.JS FILE.
