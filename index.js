@@ -8,7 +8,7 @@ async function sendValues() {
     // TODO: add cancer, alzherimers, diabetes
 
     // fetching the data
-    const url = 'http://localhost:3000/calculate'
+    const url = 'https://health-insurance-server.azurewebsites.net/calculate'
     const queryString = `?age=${age}&height=${height}&weight=${weight}&sysBloodPressure=${sysBloodPressure}&diaBloodPressure=${diaBloodPressure}&diabetes=${diabetes}&cancer=${cancer}&alzheimers=${alzheimers}`
     const res = await fetch(url + queryString) // fetching the string from above
     const resText = await res.text()
