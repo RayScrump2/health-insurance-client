@@ -7,6 +7,12 @@ async function sendValues() {
     const sysBloodPressure = document.getElementById('sysBloodPressure').value
     const diaBloodPressure = document.getElementById('diaBloodPressure').value
     // TODO: add cancer, alzherimers, diabetes
+    
+    // Adding cancer, alzheimers and diabetes - JB
+    const cancer = document.getElementById('cancer').value
+    const alzheimers = document.getElementById('alzheimers').value
+    const diabetes = document.getElementById('diabetes').value
+
 
     // fetching the data
     const queryString = `?age=${age}&height=${height}&weight=${weight}&sysBloodPressure=${sysBloodPressure}&diaBloodPressure=${diaBloodPressure}&diabetes=${diabetes}&cancer=${cancer}&alzheimers=${alzheimers}`
