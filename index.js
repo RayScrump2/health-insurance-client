@@ -1,3 +1,4 @@
+const url = 'https://health-insurance-server.azurewebsites.net/api/data'
 // This function is getting the values from the html form document
 async function sendValues() {
     const age = document.getElementById('age').value
@@ -8,10 +9,12 @@ async function sendValues() {
     // TODO: add cancer, alzherimers, diabetes
 
     // fetching the data
-    const url = 'https://health-insurance-server.azurewebsites.net/calculate'
     const queryString = `?age=${age}&height=${height}&weight=${weight}&sysBloodPressure=${sysBloodPressure}&diaBloodPressure=${diaBloodPressure}&diabetes=${diabetes}&cancer=${cancer}&alzheimers=${alzheimers}`
-    const res = await fetch(url + queryString) // fetching the string from above
+    const res = await fetch(url + "/calculate" + queryString) // fetching the string from above
     const resText = await res.text()
     document.getElementById('results').innerHTML = resText
+}
 
+async function ping() {
+    const res = await fetch(url + "/ping")
 }
