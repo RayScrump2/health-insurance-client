@@ -1,4 +1,4 @@
-const url = 'https://health-insurance-server.azurewebsites.net/api/data'
+const url = 'https://health-insurance-server.azurewebsites.net'
 // This function is getting the values from the html form document
 async function sendValues() {
     const age = document.getElementById('age').value

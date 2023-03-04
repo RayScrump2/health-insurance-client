@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<!--
-		https://health-insurance-server.azurewebsites.net/api/data
+		https://health-insurance-server.azurewebsites.net
 
 		The above is the link to the server where we want to send the
 		data we collect from this form, which is currently on the 
@@ -32,7 +32,7 @@
 	<!--
 		The form below collects the data entered by the user.
 		Each label for, id, and name should match the respective field.
-		Any questions just ask - Brian
+		Any questions, just ask - Brian
 	-->
 	<form class="form" onsubmit="return false;">
 	  	<label for="age">Enter the person's age in years: </label>
@@ -51,22 +51,22 @@
 	  	<input class="form-control" type="text" id="diaBloodPressure" name="diaBloodPressure" required placeholder="Diastolic"><br>
 		<p>Does the person have a family history of ...</p>
 		<label for="diabetes">Diabetes?</label>
-	  	<select class="form-control" id="diabetes" name="diabetes">
-			<option selected>Choose</option>
+	  	<select class="form-control" id="diabetes" name="diabetes" required>
+			<option selected disabled>Choose</option>
 			<option>Yes</option>
 			<option>No</option>
 		  </select><br>
 
 		<label for="cancer">Cancer?</label>
-		<select class="form-control" id="cancer" name="cancer">
-			<option selected>Choose</option>
+		<select class="form-control" id="cancer" name="cancer" required>
+			<option selected disabled>Choose</option>
 			<option>Yes</option>
 			<option>No</option>
 		</select><br>
 
 		<label for="alzheimers">Alzheimers?</label>
-		<select class="form-control" id="alzheimers" name="alzheimers" >
-			<option selected>Choose</option>
+		<select class="form-control" id="alzheimers" name="alzheimers" required>
+			<option selected disabled>Choose</option>
 			<option>Yes</option>
 			<option>No</option>
 		</select><br>
