@@ -9,10 +9,11 @@ async function sendValues() {
     // TODO: add cancer, alzherimers, diabetes
 
     // Adding cancer, alzheimers and diabetes - JB
+    //
     const cancer = document.getElementById('cancer').value
     const alzheimers = document.getElementById('alzheimers').value
     const diabetes = document.getElementById('diabetes').value
-
+    
     // fetching the data
     const queryString = `?age=${age}&height=${height}&weight=${weight}&sysBloodPressure=${sysBloodPressure}&diaBloodPressure=${diaBloodPressure}&diabetes=${diabetes}&cancer=${cancer}&alzheimers=${alzheimers}`
     const res = await fetch(url + "/calculate" + queryString) // fetching the string from above
