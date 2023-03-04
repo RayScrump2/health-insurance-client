@@ -1,13 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<!--
-		https://health-insurance-server.azurewebsites.net
-
-		The above is the link to the server where we want to send the
-		data we collect from this form, which is currently on the 
-		client side.
-	-->
 	<meta charset="utf-8">
 	<title>Health Insurance Calculator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,9 +31,18 @@
 	  	<label for="age">Enter the person's age in years: </label>
 	  	<input class="form-control" type="text" id="age" name="age" required placeholder="Age"><br>
   
-	 	<label for="height">Enter the person's height in inches: </label>
-	 	<input class="form-control" type="text" id="height" name="height" required placeholder="Height"><br>
+	 	<label for="heightType">Which unit of measurements would you like to use for height? </label>
+	 	<select id="heightType" class="form-control">
+			<option value="inches">Inches</option>
+			<option value="feet">Feet</option>
+		</select>
+		<br>
 
+		<label for="height">Enter the person's height: </label>
+	  	<input class="form-control" type="text" id="height" name="height" required placeholder="Height"><br>
+		<!--
+		<input class="form-control" type="text" id="height" name="height" required placeholder="Height"><br>
+		-->
 		<label for="weight">Enter the person's weight in pounds: </label>
 	  	<input class="form-control" type="text" id="weight" name="weight" required placeholder="Weight"><br>
 
