@@ -24,7 +24,6 @@ async function sendValues() {
         height = document.getElementById('height').value * 12 // converts feet back to inches for calculation purposes
     }
 
-
     // fetching the data
     const queryString = `?age=${age}&height=${height}&weight=${weight}&sysBloodPressure=${sysBloodPressure}&diaBloodPressure=${diaBloodPressure}&diabetes=${diabetes}&cancer=${cancer}&alzheimers=${alzheimers}`
     const res = await fetch(url + "/calculate" + queryString) // fetching the string from above
