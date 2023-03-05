@@ -3,7 +3,7 @@
  * The above is the link to the server where we want to send the
  * data we collect from this form, which is currently on the client side.
 */
-const url = 'https://health-insurance-server.azurewebsites.net'
+const url = 'http://localhost:3000'
 // This function is getting the values from the html form document
 async function sendValues() {
     // variables
@@ -42,7 +42,11 @@ async function sendValues() {
     const res = await fetch(url + "/calculate" + queryString) // fetching the string from above
     const resText = await res.text()
     document.getElementById('results').innerHTML = resText
-    document.getElementById('refreshButton').removeAttribute('hidden');
+    const submitButton = document.getElementById('buttonSubmit')
+    submitButton.style.display = 'none'
+    document.getElementById('goAgain').innerHTML = 'Do you have another patient?'
+    document.getElementById('refreshButton').removeAttribute('hidden')
+    document.getElementById('dontRefresh').removeAttribute('hidden')
     }
 }
 

@@ -25,7 +25,7 @@
 	<!--
 		The form below collects the data entered by the user.
 	-->
-	<form class="form" id="myForm" onsubmit="return false;">
+	<form class="form" id="myForm" onsubmit="return false">
 	  	<label for="age">Enter the person's age in years: </label>
 	  	<input class="form-control" type="number" id="age" name="age" required placeholder="Age"><br>
   
@@ -71,11 +71,15 @@
 			<option>No</option>
 		</select><br>
 
-	  	<button type="submit" id="buttonSubmit" class="btn btn-secondary" onclick="sendValues()">Calculate Risk</button>
-		  <button onclick=refreshPage() id="refreshButton" class="btn btn-secondary" hidden>Refresh Page</button>
+	  	<button type="submit" id="buttonSubmit" class="btn btn-secondary" onclick="sendValues()" >Calculate Risk</button>
+		<br>
 	</form>
-	<br>
 	<h4 class="results" id="results" name="results"></h4>
+	<br>
+	<h5 id="goAgain" name="goAgain" class="results"></h5>
+	<br>
+	<button onclick=refreshPage() id="refreshButton" class="btn btn-secondary" hidden>Yes</button>
+	<button id="dontRefresh" class="btn btn-secondary" hidden>No</button>
 	<!--
 		SCRIPT SRC IS FOR GETTING THE JS CODE FROM THE INDEX.JS FILE.
 		IF YOU NEED HELP ON THIS LET ME KNOW - BRIAN
