@@ -3,7 +3,7 @@
  * The above is the link to the server where we want to send the
  * data we collect from this form, which is currently on the client side.
 */
-const url = 'http://localhost:3000'
+const url = 'https://health-insurance-server.azurewebsites.net'
 // This function is getting the values from the html form document
 async function sendValues() {
     // variables
