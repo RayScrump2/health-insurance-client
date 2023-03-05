@@ -25,9 +25,9 @@
 	<!--
 		The form below collects the data entered by the user.
 	-->
-	<form class="form" onsubmit="return false;">
+	<form class="form" id="myForm" onsubmit="return false;">
 	  	<label for="age">Enter the person's age in years: </label>
-	  	<input class="form-control" type="text" id="age" name="age" required placeholder="Age"><br>
+	  	<input class="form-control" type="number" id="age" name="age" required placeholder="Age"><br>
   
 	 	<label for="heightType">Which unit of measurements would you like to use for height? </label>
 	 	<select id="heightType" class="form-control">
@@ -37,41 +37,41 @@
 		<br>
 
 		<label for="height">Enter the person's height: </label>
-	  	<input class="form-control" type="text" id="height" name="height" required placeholder="Height"><br>
+	  	<input class="form-control" type="number" id="height" name="height" min="22" required placeholder="Height"><br>
 		<!--
 		<input class="form-control" type="text" id="height" name="height" required placeholder="Height"><br>
 		-->
 		<label for="weight">Enter the person's weight in pounds: </label>
-	  	<input class="form-control" type="text" id="weight" name="weight" required placeholder="Weight"><br>
+	  	<input class="form-control" type="number" id="weight" name="weight" required placeholder="Weight"><br>
 
 		<label for="sysBloodPressure">Enter the person's systolic blood pressure: </label>
-	  	<input class="form-control" type="text" id="sysBloodPressure" name="sysBloodPressure" required placeholder="Systolic"><br>
+	  	<input class="form-control" type="number" id="sysBloodPressure" name="sysBloodPressure" required placeholder="Systolic"><br>
 
 		<label for="diaBloodPressure">Enter the person's diastolic blood pressure: </label>
-	  	<input class="form-control" type="text" id="diaBloodPressure" name="diaBloodPressure" required placeholder="Diastolic"><br>
+	  	<input class="form-control" type="number" id="diaBloodPressure" name="diaBloodPressure" required placeholder="Diastolic"><br>
 		<p>Does the person have a family history of ...</p>
 		<label for="diabetes">Diabetes?</label>
 	  	<select class="form-control" id="diabetes" name="diabetes" required>
-			<option selected disabled>Choose</option>
+			<option selected disabled></option>
 			<option>Yes</option>
 			<option>No</option>
 		  </select><br>
 
 		<label for="cancer">Cancer?</label>
 		<select class="form-control" id="cancer" name="cancer" required>
-			<option selected disabled>Choose</option>
+			<option selected disabled></option>
 			<option>Yes</option>
 			<option>No</option>
 		</select><br>
 
 		<label for="alzheimers">Alzheimers?</label>
 		<select class="form-control" id="alzheimers" name="alzheimers" required>
-			<option selected disabled>Choose</option>
+			<option selected disabled></option>
 			<option>Yes</option>
 			<option>No</option>
 		</select><br>
 
-	  	<button type="submit" class="btn btn-secondary" onclick="sendValues()">Calculate Risk</button>
+	  	<button type="submit" id="buttonSubmit" class="btn btn-secondary" onclick="sendValues()">Calculate Risk</button>
 	</form>
 	<br>
 	<h4 class="results" id="results" name="results"></h4>
