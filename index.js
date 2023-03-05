@@ -42,9 +42,13 @@ async function sendValues() {
     const res = await fetch(url + "/calculate" + queryString) // fetching the string from above
     const resText = await res.text()
     document.getElementById('results').innerHTML = resText
+    document.getElementById('refreshButton').removeAttribute('hidden');
     }
 }
 
 async function ping() {
     const res = await fetch(url + "/ping")
+}
+function refreshPage() {
+    window.location.reload();
 }
