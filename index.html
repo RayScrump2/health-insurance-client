@@ -26,36 +26,36 @@
 		The form below collects the data entered by the user.
 	-->
 	<form class="form" id="myForm" onsubmit="return false">
+		<h2>General Information</h2> <br>
 	  	<label for="age">Enter the person's age in years: </label>
 	  	<input class="form-control" type="number" id="age" name="age" required placeholder="Age"><br>
   
-	 	<label for="heightType">Which unit of measurements would you like to use for height? </label>
-	 	<select id="heightType" class="form-control">
-			<option value="inches">Inches</option>
-			<option value="feet">Feet</option>
-		</select>
-		<br>
-
 		<label for="height">Enter the person's height: </label>
-	  	<input class="form-control" type="number" id="height" name="height" min="22" required placeholder="Height"><br>
+		<input class="form-control" type="number" id="feet" name="feet" min="2" required placeholder="Feet">
+	  	<input class="form-control" type="number" id="inches" name="inches" min="0" required placeholder="Inches"><br>
 		<!--
 		<input class="form-control" type="text" id="height" name="height" required placeholder="Height"><br>
 		-->
 		<label for="weight">Enter the person's weight in pounds: </label>
 	  	<input class="form-control" type="number" id="weight" name="weight" required placeholder="Weight"><br>
+		<div class="line"></div>
+		<h2>Blood Pressure Information</h2> <br>
+		<img src="blood pressure.png" alt="Blood Pressure Chart"> <br>
 
 		<label for="sysBloodPressure">Enter the person's systolic blood pressure: </label>
 	  	<input class="form-control" type="number" id="sysBloodPressure" name="sysBloodPressure" required placeholder="Systolic"><br>
 
 		<label for="diaBloodPressure">Enter the person's diastolic blood pressure: </label>
 	  	<input class="form-control" type="number" id="diaBloodPressure" name="diaBloodPressure" required placeholder="Diastolic"><br>
+		<div class="line"></div>
+		<h2>Family History Information</h2> <br>
 		<p>Does the person have a family history of ...</p>
 		<label for="diabetes">Diabetes?</label>
 	  	<select class="form-control" id="diabetes" name="diabetes" required>
 			<option selected disabled></option>
 			<option>Yes</option>
 			<option>No</option>
-		  </select><br>
+		</select><br>
 
 		<label for="cancer">Cancer?</label>
 		<select class="form-control" id="cancer" name="cancer" required>
@@ -79,7 +79,6 @@
 	<h5 id="goAgain" name="goAgain" class="results"></h5>
 	<br>
 	<button onclick=refreshPage() id="refreshButton" class="btn btn-secondary" hidden>Yes</button>
-	<button id="dontRefresh" class="btn btn-secondary" hidden>No</button>
 	<!--
 		SCRIPT SRC IS FOR GETTING THE JS CODE FROM THE INDEX.JS FILE.
 		IF YOU NEED HELP ON THIS LET ME KNOW - BRIAN
